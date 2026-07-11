@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alba & Mateo · Nuestra Boda</title>
+<meta name="description" content="Nos casamos el 14 de junio de 2026. Acompáñanos en la celebración." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f5; --ink:#3a3a3a; --muted:#6b6b6b;
+    --champan:#f3e9d8; --arena:#d8c8b8; --dorado:#c5a57a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  img{max-width:100%;display:block}
+  .kicker{letter-spacing:.4em;font-size:11px;text-transform:uppercase;color:var(--dorado)}
+  .h-serif{font-family:'Cormorant Garamond',serif;font-weight:400}
+  .script{font-family:'Great Vibes',cursive;color:var(--dorado)}
+  section{padding:6rem 1.5rem}
+  .wrap{max-width:1080px;margin:0 auto}
+  .section-title{text-align:center;margin-bottom:3.5rem}
+  .section-title h2{font-size:clamp(2rem,5vw,3rem);margin-top:.75rem}
+  .section-title .rule{width:60px;height:1px;background:var(--dorado);margin:1.25rem auto 0}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--champan);
+    background:linear-gradient(rgba(58,58,58,.35),rgba(58,58,58,.55)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80') center/cover;
+  }
+  .hero h1{font-family:'Great Vibes',cursive;font-size:clamp(4rem,12vw,9rem);line-height:1;margin:1.5rem 0;color:var(--champan)}
+  .hero .band{display:inline-flex;gap:1.5rem;padding:.75rem 2rem;border-top:1px solid var(--dorado);border-bottom:1px solid var(--dorado);font-family:'Cormorant Garamond',serif;font-size:1.25rem;letter-spacing:.2em}
+  .countdown{display:flex;justify-content:center;gap:1rem;margin-top:2.5rem;flex-wrap:wrap}
+  .countdown div{min-width:64px}
+  .countdown .n{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--champan)}
+  .countdown .l{font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+
+  /* Grids */
+  .grid{display:grid;gap:2.5rem}
+  @media(min-width:720px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g6{grid-template-columns:repeat(3,1fr)}}
+  .g6{grid-template-columns:repeat(2,1fr);gap:.75rem}
+
+  /* Historia */
+  .story-item{text-align:center}
+  .story-item .year{font-family:'Great Vibes',cursive;font-size:3rem;color:var(--dorado)}
+  .story-item h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;margin:.5rem 0 .75rem}
+  .story-item p{color:var(--muted);font-size:14px}
+
+  /* Evento */
+  .evento{background:var(--champan)}
+  .card{background:var(--bg);padding:3rem 2rem;text-align:center;border:1px solid var(--arena)}
+  .card h3{font-family:'Cormorant Garamond',serif;font-size:2rem;margin:1rem 0 .5rem}
+  .card .p{font-family:'Cormorant Garamond',serif;font-size:1.25rem}
+  .card .addr{font-size:13px;color:var(--muted);margin-top:6px}
+  .dress{text-align:center;margin-top:2.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem}
+
+  /* Galería */
+  .gal img{aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .6s}
+  .gal .cell{overflow:hidden}
+  .gal .cell:hover img{transform:scale(1.05)}
+
+  /* RSVP */
+  .rsvp{background:var(--champan)}
+  form{max-width:520px;margin:0 auto;display:grid;gap:1rem}
+  label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px;color:var(--muted)}
+  input,select{width:100%;padding:.85rem 1rem;background:var(--bg);border:1px solid var(--arena);font-family:inherit;font-size:14px;color:var(--ink)}
+  button{padding:1rem 2rem;background:var(--ink);color:var(--champan);border:none;letter-spacing:.3em;font-size:12px;text-transform:uppercase;cursor:pointer;margin-top:.5rem}
+  button:hover{background:#000}
+
+  /* FAQ */
+  details{border-bottom:1px solid var(--arena);padding:1.25rem 0}
+  summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.25rem;list-style:none}
+  details p{margin-top:8px;color:var(--muted);font-size:14px}
+  .faq-wrap{max-width:680px;margin:0 auto}
+
+  /* Footer */
+  footer{text-align:center;padding:4rem 1.5rem;background:var(--ink);color:var(--champan)}
+  footer .name{font-family:'Great Vibes',cursive;font-size:3.5rem;color:var(--dorado)}
+  footer .meta{letter-spacing:.3em;font-size:11px;text-transform:uppercase;margin-top:8px}
+  footer .love{margin-top:2rem;font-size:12px;color:#a89b85}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <p class="kicker">Nos casamos</p>
+    <h1>Alba &amp; Mateo</h1>
+    <div class="band"><span>14 de Junio, 2026</span><span>·</span><span>Toledo</span></div>
+    <div class="countdown" id="cd">
+      <div><div class="n" id="d">00</div><div class="l">Días</div></div>
+      <div><div class="n" id="h">00</div><div class="l">Horas</div></div>
+      <div><div class="n" id="m">00</div><div class="l">Min</div></div>
+      <div><div class="n" id="s">00</div><div class="l">Seg</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section>
+  <div class="wrap">
+    <div class="section-title"><p class="kicker">Cómo empezó todo</p><h2 class="h-serif">Nuestra historia</h2><div class="rule"></div></div>
+    <div class="grid g3">
+      <div class="story-item"><div class="year">2018</div><h3>Nos conocimos</h3><p>Un café en primavera bastó para que todo cambiara.</p></div>
+      <div class="story-item"><div class="year">2021</div><h3>Nuestro primer viaje</h3><p>Descubrimos que juntos el mundo se veía distinto.</p></div>
+      <div class="story-item"><div class="year">2024</div><h3>La propuesta</h3><p>Al atardecer, frente al mar, dijo "sí para siempre".</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTO -->
+<section class="evento">
+  <div class="wrap">
+    <div class="section-title"><p class="kicker">Detalles del evento</p><h2 class="h-serif">El gran día</h2><div class="rule"></div></div>
+    <div class="grid g2">
+      <div class="card"><p class="kicker">Ceremonia</p><h3>17:00</h3><p class="p">Ermita de San Juan</p><p class="addr">Camino del Olivar s/n, Toledo</p></div>
+      <div class="card"><p class="kicker">Celebración</p><h3>19:30</h3><p class="p">Finca El Olivar</p><p class="addr">Ctra. de los Cipreses km 4, Toledo</p></div>
+    </div>
+    <p class="dress">Dress code: Formal · Tonos tierra y neutros</p>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section>
+  <div class="wrap">
+    <div class="section-title"><p class="kicker">Galería</p><h2 class="h-serif">Momentos</h2><div class="rule"></div></div>
+    <div class="grid gal g6">
+      <div class="cell"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="cell"><img loading="lazy" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="cell"><img loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="cell"><img loading="lazy" src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="cell"><img loading="lazy" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="cell"><img loading="lazy" src="https://images.unsplash.com/photo-1519657337289-077653f724ed?auto=format&fit=crop&w=900&q=80" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp">
+  <div class="wrap">
+    <div class="section-title"><p class="kicker">RSVP</p><h2 class="h-serif">Confirma tu asistencia</h2><div class="rule"></div></div>
+    <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block';">
+      <div><label>Nombre completo</label><input required></div>
+      <div><label>Email</label><input type="email" required></div>
+      <div><label>Asistencia</label>
+        <select required><option value="" disabled selected>Selecciona</option><option>Sí, allí estaré</option><option>Con acompañante</option><option>No podré asistir</option></select>
+      </div>
+      <div><label>Restricciones alimentarias</label><input></div>
+      <button type="submit">Enviar confirmación</button>
+    </form>
+    <p id="ok" style="display:none;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic">¡Gracias! Hemos recibido tu confirmación 🤍</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="section-title"><p class="kicker">Info útil</p><h2 class="h-serif">Preguntas frecuentes</h2><div class="rule"></div></div>
+    <div class="faq-wrap">
+      <details><summary>¿Habrá aparcamiento?</summary><p>Sí, la finca dispone de parking gratuito para todos los invitados.</p></details>
+      <details><summary>¿Puedo llevar acompañante?</summary><p>Consulta tu invitación; el nombre del acompañante aparece indicado.</p></details>
+      <details><summary>¿Hasta cuándo puedo confirmar asistencia?</summary><p>Agradecemos confirmar antes del 1 de mayo de 2026.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="name">Alba &amp; Mateo</div>
+  <p class="meta">14 de Junio, 2026 · Finca El Olivar · Toledo</p>
+  <p class="love">Con amor · Nos vemos pronto</p>
+</footer>
+
+<script>
+  const target = new Date('2026-06-14T17:00:00').getTime();
+  const el = id => document.getElementById(id);
+  function tick(){
+    const diff = Math.max(0, target - Date.now());
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff/3600000)%24);
+    const m = Math.floor((diff/60000)%60);
+    const s = Math.floor((diff/1000)%60);
+    el('d').textContent = String(d).padStart(2,'0');
+    el('h').textContent = String(h).padStart(2,'0');
+    el('m').textContent = String(m).padStart(2,'0');
+    el('s').textContent = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+</script>
+</body>
+</html>
